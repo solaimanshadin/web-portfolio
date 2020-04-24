@@ -1,85 +1,105 @@
-body {
-    font-family: 'Poppins', sans-serif;
+body{
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
-
-h1 {
-    font-size: 50px;
-}
-
-h2 {
-    font-size: 38px;
-}
-
-p {
-    color: dimgray;
-}
-
-.orange-highlight {
+.text-orange{
     color: orange;
 }
+img{
+    max-width: 100%;
+}
+h1{
+    font-size:50px;
+    font-weight: 500;
+}
+p{
+    color: dimgrey;
+}
+a{
+    text-decoration: none;
+}
+.btn-primary{
+    background-image:linear-gradient(45deg, lightsalmon, tomato);
+    padding: 10px 30px;
+    border: 0;
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+}
 
-.half-width {
+.half-width{
     width: 40%;
-    float: left;
     margin-left: 5%;
     padding-left: 2%;
-}
+} 
 
-.half-width img {
-    width: 100%;
-}
-
-section {
-    padding-bottom: 150px;
-    overflow: hidden;
-}
-
-.top-banner {
-    background-image: url(images/top-banner.png);
+section{
+    display: flex;
     background-repeat: no-repeat;
+    padding: 60px 0;
+    overflow: hidden;
+
 }
 
-.link-button {
-    text-decoration: none;
-    background-image: linear-gradient(45deg, lightsalmon, tomato);
-    padding: 10px 20px;
-    border: 10px;
-    color: white;
-    font-weight: blod;
+#intro-area{
+    background-image: url(images/top-banner.png);
 }
 
-.dream-area {
+#dream-area{
     background-image: url(images/dream-bg.png);
     background-position: right;
-    background-repeat: no-repeat;
+
 }
 
-.experience-area {
+#experience-area{
     background-image: url(images/exp-bg.png);
-    background-repeat: no-repeat;
     background-position: left;
 }
-
-.single-experience {
-    box-shadow: 10px 10px 40px rgba(128, 128, 128, 0.473);
+.section-title{
+    opacity: .2;
+    text-transform: uppercase;
+}
+.single-experience{
+    background-color: #ffffff;
+    padding: 35px;
+    box-shadow: 0 0 40px #00000014;
     border-radius: 5px;
-    height: 350px;
-    background: white;
-}
 
-#mern-stack {
-    border-left: 7px solid;
-    border-image: linear-gradient(180deg, blue, cyan);
-    border-image-slice: 1;
 }
-
-#full-stack {
+#ex-1{
     border-left: 7px solid;
     border-image: linear-gradient(180deg, orange, tomato);
     border-image-slice: 1;
 }
-
-footer p {
+#ex-2{
+    border-left: 7px solid;
+    border-image: linear-gradient(180deg, blue, cyan);
+    border-image-slice: 1
+}
+footer{
     text-align: center;
+    margin-top: 50px;
+}
+
+@media (max-width:1000px) {
+    h1{
+        font-size: 40px;
+    }
+    img{
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+    section{
+        flex-direction: column;
+        padding-bottom: 0px;
+    }
+    .md-first{
+        order: 2;
+    }
+    .half-width{
+        margin: 0;
+        width: 88%;
+        padding: 6%;
+    }
 }
